@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+
+
+
+
+/*navbar*/
+
+
+
+.nav {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    animation: fade 1.5s;
+
+
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0%;
+        transform: translateY(20px);
+    }
+
+    50% {
+        opacity: 0;
+        ;
+    }
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+.icon {
+    max-width: 26px;
+    max-height: 26px;
+    border-radius: 20px;
+    border: solid black 1px;
+}
+
+li {
+    font-size: 26px;
+}
+
+.lien {
+    text-decoration: none;
+    color: rgb(121, 37, 37);
+    border-radius: 10px;
+    border: 1px solid rgb(121, 37, 37);
+}
+
+.lien:hover {
+    color: white;
+    background-color: rgb(121, 37, 37);
+
+}
+
+.proj2 {
+    color: rgb(10, 78, 13);
+    border: 1px solid rgb(10, 78, 13);
+}
+
+.proj2:hover {
+    color: white;
+    background-color: rgb(10, 78, 13);
+}
+
+.proj3 {
+    color: rgb(32, 17, 117);
+    border: 1px solid rgb(32, 17, 117);
+}
+
+.proj3:hover {
+    color: white;
+    background-color: rgb(32, 17, 117);
+}
+
+
+
+/*presentation*/
+
+.home {
+    margin: 20px 0 20px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.pdp {
+    max-width: 300px;
+    border-radius: 50%;
+    display: block;
+}
+
+
+
+.pdp:hover {
+    animation-name: tourne;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+
+
+}
+
+@keyframes tourne {
+
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+.imgpres {
+    max-width: 500px;
+    max-height: 600px;
+}
+
+.projet {
+    margin: 35px 0 35px;
+    padding: 5em;
+}
+
+@media screen and (max-width:800) {}
+
+/*projet 1 avec le display flex*/
+
+
+#projet1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: solid 1px rgb(121, 37, 37);
+    transition: 1s;
+    flex-wrap: wrap;
+}
+
+
+#projet1 h1 {
+    text-align: center;
+    font-weight: 900;
+}
+
+#projet1:hover {
+    background-color: rgb(121, 37, 37);
+    transition: 1s;
+
+}
+
+/*projet 2 avec bootstrap*/
+
+#projet2 {
+    border: solid 1px rgb(10, 78, 13);
+    transition: 1s;
+}
+
+#projet2 h1 {
+    text-align: center;
+    font-weight: 900;
+}
+
+#projet2:hover {
+    background-color: rgb(10, 78, 13);
+    transition: 1s;
+
+}
+
+/*projet 3 avec grid */
+
+#projet3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 1fr 50px;
+    grid-template-areas:
+        "titre ."
+        "imagepres ."
+        "description description";
+    border: solid 1px rgb(32, 17, 117);
+    transition: 1s;
+}
+
+.titre {
+    grid-area: titre;
+}
+
+.imagepres {
+    grid-area: imagepres;
+}
+
+.description {
+    grid-area: description;
+}
+
+#projet3:hover {
+    background-color: rgb(32, 17, 117);
+    color: white;
+    transition: 1s;
+
+}
